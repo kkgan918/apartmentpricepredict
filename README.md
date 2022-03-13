@@ -1,1 +1,1 @@
-# appartmentpricepredict
+# apartmentpricepredict
