@@ -4,8 +4,8 @@ import numpy as np
 import pandas as pd
 
 #load the model and dataframe
-df = pd.read_csv(r'C:\Users\Gany Gan\Desktop\st\house_price.csv')
-pipe = pickle.load(open(r'C:\Users\Gany Gan\Desktop\st\house_price.pkl', "rb"))
+df = pd.read_csv('house_price.csv')
+pipe = pickle.load(open('house_price.pkl', "rb"))
 
 #Theme
 
@@ -74,7 +74,7 @@ def main():
 
     if choice == "Sweetviz":
         st.subheader("Automated EDA with Sweetviz")
-        df = pd.read_csv(r'C:\Users\Gany Gan\Desktop\st\house_price.csv')
+        df = pd.read_csv('house_price.csv')
         st.dataframe(data=df, width=1000, height=300)
         if st.button("Generate Sweetviz Report"):
 
@@ -236,7 +236,7 @@ def main():
             </script>
              """)
         #Now we will take user input one by one as per our dataframe
-        df = pd.read_csv(r'C:\Users\Gany Gan\Desktop\st\house_price.csv')
+        df = pd.read_csv('house_price.csv')
         #Area
         Area = st.selectbox('Location', df['Area'].unique())
         #Bedrooms
